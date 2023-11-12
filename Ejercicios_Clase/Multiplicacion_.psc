@@ -1,16 +1,27 @@
+Funcion pedirNumero()
+	Escribir"ingresa un número"
+FinFuncion
+Funcion 	multi<-MultiplicarDosNumeros(num1,num2)
+	multi <- (num1*num2)
+FinFuncion
+
 Algoritmo Multiplicacion
-	Definir num1, num2, res, resultado Como Entero
+	Definir num1, num2, res Como Entero
 	
-	Escribir "Ingresa el primer número"
+	pedirNumero()
 	Leer num1
-	Escribir "Ingresa el segundo nuúmero"
-	Leer num2
+	Si num1>0 Entonces
+		pedirNumero()
+		Leer num2
+		
+		Si num2>0 Entonces
+			Escribir  num1, " * " ,num2, " = "
+			Leer res
+			//Muestro la operación a realizar 
+			Escribir "El resultado es ",abs(MultiplicarDosNumeros(num1,num2)) , " Tu resultado " res = MultiplicarDosNumeros(num1,num2)
 	
-	Escribir  num1 " x " num2 
-	Escribir "Ingresa el resultado"
-	Leer res
-	
-	resultado<-num1*num2
-	Escribir "Tu resultado es correcto: " res = resultado
+		FinSi
+		
+	FinSi
 	
 FinAlgoritmo
