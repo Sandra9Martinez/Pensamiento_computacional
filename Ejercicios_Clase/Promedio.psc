@@ -10,13 +10,13 @@ Algoritmo Promedio
 	leer nombre
 	
 	//solicito y asigno las calificaciones
-	Escribir "Ingresa la calificaci髇 1"
+	Escribir "Ingresa la calificaci贸n 1"
 	leer cal1
-	Escribir "Ingresa la calificaci髇 2"
+	Escribir "Ingresa la calificaci贸n 2"
 	leer cal2
-	Escribir "Ingresa la calificaci髇 3"
+	Escribir "Ingresa la calificaci贸n 3"
 	leer cal3
-	Escribir "Ingresa la calificaci髇 4"
+	Escribir "Ingresa la calificaci贸n 4"
 	leer cal4
 	
 	//obtener promedio
@@ -31,3 +31,73 @@ Algoritmo Promedio
 	Escribir "Aprobado:", asistencia >= 24 Y prom >= 7
 		
 	FinAlgoritmo
+
+
+
+
+
+
+PROMEDIO COMPLETO 
+
+Algoritmo promedio_alumno
+	Definir calificacion_alumno, suma_calificaciones, calificacion_baja, calificacion_alta como Real
+	Definir nombre_alumno, nombre_materia, materia_mayor, materia_menor Como Caracter
+	
+	//solicitar el nombre del alumno 
+	Escribir "Ingresa el nombre del alumno"
+	leer nombre_alumno 
+	
+	nombre_alumno<- Mayusculas(nombre_alumno)
+	
+	//Solicitar primera calificaci贸n  y asignarla como la mayor y la menor 
+	Escribir "Ingresa el nombre de la materia 1 "
+	Leer nombre_materia
+	
+	materia_menor <- nombre_materia
+	materia_mayor <- nombre_materia 
+	
+	Escribir "Ingresa la calificaci贸n de ", nombre_materia, " :"
+	leer calificacion_alumno
+	
+	calificacion_baja <- calificacion_alumno
+	calificacion_alta <- calificacion_alumno 
+	
+	suma_calificaciones <- suma_calificaciones + calificacion_alumno 
+	
+	Limpiar Pantalla
+	
+	Para i <- 0 Hasta 2 Con Paso 1 Hacer
+		Escribir "Ingresa el nombre de la materia ", i + 2
+		Leer nombre_materia
+		Escribir "Ingresa la calificaci贸n de ", nombre_materia, i + 2
+		leer calificacion_alumno
+		suma_calificaciones <- suma_calificaciones + calificacion_alumno 
+		Si(calificacion_alumno> calificacion_alta ) Entonces
+			calificacion_alta = calificacion_alumno 
+			materia_mayor = nombre_materia 
+		FinSi
+		
+		Si(calificacion_alumno < calificacion_baja ) Entonces
+			calificacion_baja = calificacion_alumno
+			materia_menor = nombre_materia 
+		FinSi
+	Fin Para
+	
+	
+	Escribir "La calificacion m谩s alta es: ", calificacion_alta 
+	Escribir "La calificacion m谩s baja es: ", calificacion_baja 
+	
+	prom<-(suma_calificaciones)/4
+	
+	//Salida de resultado
+	Escribir "Promedio de ", nombre, ":", prom
+	Escribir "Aprobado:", prom >= 7
+	
+	
+FinAlgoritmo
+
+
+
+
+
+
