@@ -1,0 +1,71 @@
+// Programa, usando un algoritmo de estructura selectiva, lo siguiente: 
+	//Diseña un algoritmo representándolo en un diagrama de flujo y pseudocódigo 
+	//para mostrar el mensaje APROBADO si la nota final de un estudiante es mayor o igual que 4,0, 
+	//y el mensaje REPROBADO en caso contrario. Considere además el siguiente requisito adicional que la nota debe cumplir: 
+	//debe estar dentro del rango 1,0 a 7,0.
+	
+Algoritmo Aprobado
+	Definir cal1 Como Real
+	
+	Escribir "Ingresa la calificación "
+	Leer cal1
+	
+	Si cal1 >= 1 Y cal1 <= 7 Entonces
+		
+		Si cal1 >= 4 Y cal1 <= 7 Entonces
+			Escribir "APROBADO"
+		FinSi
+		
+		Si  cal1>= 1 Y cal1 < 4	Entonces
+			Escribir "Reprobado"
+		FinSi
+		
+	SiNo
+		
+		Escribir "ERROR, fuera de rango"
+	FinSi
+		
+	
+FinAlgoritmo
+
+
+
+
+// Programa, usando un algoritmo de estructura repetitiva, lo siguiente:
+// Diseña un algoritmo representándolo en diagrama de flujo y pseudocódigo para obtener la edad promedio
+// de un grupo de N alumnos.
+SubProceso PedirAlumnos()
+	Escribir '¿Cuántos alumnos son?'
+FinSubProceso
+
+SubProceso PedirEdad()
+	Escribir 'Ingresa tu Edad'
+FinSubProceso
+
+Proceso edades
+	Definir edad,promedio,alumnos,suma,i,j Como Real
+	edad <- 0
+	promedio <- 0
+	alumnos <- 0
+	suma <- 0
+	i <- 0
+	j <- 0
+	PedirAlumnos()
+	Leer j
+	Mientras i<j Hacer
+		i <- i+1
+		PedirEdad()
+		Leer edad
+		suma <- suma+edad
+	FinMientras
+	promedio <- suma/j
+	Escribir 'El promedio es de ',promedio
+FinProceso
+
+SubProceso SinTitulo
+	
+FinSubProceso
+
+
+
+
